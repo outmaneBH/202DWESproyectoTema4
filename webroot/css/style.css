@@ -1,0 +1,18 @@
+table th,td{
+    text-align: center;
+}
+table img{
+    width: 35px;
+    height: 35px;
+}
+table td:first-child{
+    text-align: left;
+    font-family: cursive;
+    font-weight: bold;
+}
+#git{
+    width: 20px;
+   
+}
+
+
