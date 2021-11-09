@@ -45,17 +45,15 @@
                             control de errores.</td>
                         <td><a href="codigoPHP/ejercicio3.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                       
                     </tr>
 
                     <tr>
                         <td>4. Formulario   de   búsqueda   de   departamentos   por   descripción   (por   una   parte   del   campo
                             DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio4.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio4.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                       
                     </tr>
 
                     <tr>
@@ -63,8 +61,7 @@
                             insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.</td>
                         <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                
                     </tr>
 
                     <tr>
@@ -74,8 +71,7 @@
                             pasando los parámetros en un array a execute.</td>
                         <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                      
                     </tr>
                    
 
