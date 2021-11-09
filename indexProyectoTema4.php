@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
+                        <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td> 
                         <td><a href="codigoPHP/ejercicio1.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio1.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                         <td><a href="codigoPHP/ejercicio1.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
@@ -34,16 +34,16 @@
 
                     <tr>
                         <td>2. Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio2.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio2.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio2.1.php.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio2.1.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
                     <tr>
                         <td>3. Formulario para añadir un departamento a la tabla Departamento con validación de entrada y
                             control de errores.</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio3.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                         <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
