@@ -66,7 +66,7 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
             //Para cada campo del formulario: Validamos la entrada y actuar en consecuencia
             //Validar entrada
             //Comprobar si el campo description  esta rellenado 
-            $aErrores["description"] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['description'], 1000, 10, OPCIONAL);
+            $aErrores["description"] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['description'], 1000, 2, OPCIONAL);
 
 
             //recorrer el array de errores
@@ -86,9 +86,9 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
             //Tratamiento del formulario - Tratamiento de datos OK
             /* almacenamos los datos correctos */
             $aRespuestas = [
-                "codeDep" => $_REQUEST['codeDep'],
-                "description" => $_REQUEST['description'],
-                "salary" => $_REQUEST['salary']
+           
+                "description" => $_REQUEST['description']
+           
             ];
             ?>
             <div id="div2">
@@ -100,27 +100,7 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
                     </tr>
                     <?php
                     try {
-                        if ($_REQUEST['description']=="") {
-                            $sql = "SELECT * from Departamento";
-                            $resultadoConsulta = $miDB->query($sql);
-                            /* Recorrer el resultado de la consulta */
-                            $registroObjeto = $resultadoConsulta->fetchObject();
-
-                            while ($registroObjeto) {
-                                //Mostrar los datos correctos obligatorios
-                                ?>
-                                <tr>
-                                    <td><?php echo $registroObjeto->CodDepartamento; ?></td>
-                                    <td><?php echo $registroObjeto->DescDepartamento; ?></td>
-                                    <td><?php echo $registroObjeto->VolumenNegocio; ?></td>
-                                </tr>
-
-                                <?php
-                                $registroObjeto = $resultadoConsulta->fetchObject();
-                            }
-                        } else {
-
-                            $sql2 = "SELECT * from Departamento where DescDepartamento = '" . $_REQUEST['description'] . "'";
+                            $sql2 = "SELECT * from Departamento where DescDepartamento like  '%" . $_REQUEST['description'] . "%'";
                             $resultadoConsulta = $miDB->query($sql2);
 
                             if ($resultadoConsulta->rowCount() > 0) {
@@ -148,7 +128,7 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
                             <p>No hay resultados sobre este description.</p>
                             </div>';
                             }
-                        }
+                        
                         ?>
                     </table>
                 </div>

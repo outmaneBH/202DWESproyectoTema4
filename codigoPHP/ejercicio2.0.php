@@ -20,7 +20,7 @@
      * Fecha: 04/11/2021
      * description: 2. Mostrar el contenido de la tabla Departamento y el número de registros.
      */
-    require '../config/confDBPDO.php';
+    require_once '../config/confDBPDO.php';
 
     try {
         /* Establecemos la connection con pdo */

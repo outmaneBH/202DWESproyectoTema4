@@ -59,8 +59,8 @@
                     <tr>
                         <td> 5. Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
                             insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio5.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio5.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                 
                     </tr>
 
@@ -69,8 +69,8 @@
                             utilizando una consulta preparada. (Después de programar y entender este ejercicio, modificar los
                             ejercicios anteriores para que utilicen consultas preparadas). Probar consultas preparadas sin bind,
                             pasando los parámetros en un array a execute.</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio6.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio6.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                       
                     </tr>
                    

@@ -38,12 +38,13 @@
          * Fecha: 09/11/2021
          * description: 3.Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores.
          */
+        //Cambiar el try catch();
 
         /* usar la libreria de validacion */
         require_once '../core/210322ValidacionFormularios.php';
         
         /* Llamar al fichero de configuracion de base de datos */
-        require '../config/confDBPDO.php';
+        require_once '../config/confDBPDO.php';
 
         /* definir un variable constante obligatorio a 1 */
         define("OBLIGATORIO", 1);
@@ -91,7 +92,7 @@
 
             /* Si existe mostramos el error que esta */
             if ($resultadoConsulta->rowCount() > 0) {
-                $aErrores['codeDep'] = "Ese código de departamento ya existe";
+                $aErrores['codeDep'] = "Ya existe ese código";
             }
 
 
