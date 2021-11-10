@@ -1,7 +1,7 @@
 <?php
 /*Llamar la configuracion de Mysqli*/
 require '../config/confDBMySQL.php';
-
+/*
 $miDB = new mysqli();
 
 // la Conexión sin errores :
@@ -31,7 +31,7 @@ if ($error != null) {
 }
 
 //Ceramos la Conexión
-$miDB->close();
+$miDB->close();*/
 ?>
 
 

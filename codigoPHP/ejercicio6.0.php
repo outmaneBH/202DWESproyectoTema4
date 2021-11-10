@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ejercicio4.0 - PDO</title>
+        <title>Ejercicio6 - PDO</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
             div{
@@ -19,38 +19,51 @@
          */
 
         /* Llamar al fichero de configuracion de base de datos */
-        require '../config/confDBPDO.php';
+        require_once '../config/confDBPDO.php';
         try {
+            
             /* Establecemos la connection con pdo */
             $miDB = new PDO(HOST, USER, PASSWORD);
 
             /* configurar las excepcion */
             $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+            /* Iniciar el array departamentos con tres registros */
+            $aDepartamentos = [["CodDepartamento" => 'ARB', "DescDepartamento" => 'departamento ARB', "VolumenNegocio" => 2000],
+                ["CodDepartamento" => 'ORS', "DescDepartamento" => 'departamento ORS', "VolumenNegocio" => 900],
+                ["CodDepartamento" => 'OBS', "DescDepartamento" => 'departamento OBS', "VolumenNegocio" => 1899]];
+            
+            /* Insertamos datos en nuestro tabla con insert uy con prepare */
+            $sql = "
+                   INSERT INTO Departamento (CodDepartamento, DescDepartamento, VolumenNegocio) VALUES 
+                            (:CodDepartamento, :DescDepartamento, :VolumenNegocio);    
+                    ";
 
-            $sql = <<<OB
-                    INSERT INTO Departamento(CodDepartamento,DescDepartamento,VolumenNegocio) VALUES 
-                     (:codeDep,:description,:salary);    
-                    OB;
+            /* Preparamos la consulta */
             $consulta = $miDB->prepare($sql);
-            $aDepartamentos = [["codeDep" => "ARB", "description" => "departamento ARB", "salary" => 2000],
-                ["codeDep" => "ORS", "description" => "departamento ORS", "salary" => 900],
-                ["codeDep" => "OBS", "description" => "departamento OBS", "salary" => 1899]];
 
+
+            /* Empezamos nuestro transaccion */
             $miDB->beginTransaction();
 
-            foreach ($aDepartamentos as $deparatemento) {
-                $aPrametros = [[":codeDep" => $deparatemento["codeDep"]],
-                    [":description" => $deparatemento["description"]],
-                    [":salary" => $deparatemento["salary"]]];
-                $consulta ->execute($aPrametros);
+            /* Recorrer el array que hemos declarado antes de departementos */
+
+            foreach ($aDepartamentos as $departamento) {//Recorremos los registros que vamos a insertar en la tabla
+                $parametros = [":CodDepartamento" => $departamento["CodDepartamento"],
+                    ":DescDepartamento" => $departamento["DescDepartamento"],
+                    ":VolumenNegocio" => $departamento["VolumenNegocio"]];
+                /* execute la consulta */
+                $consulta->execute($parametros);
             }
+            /* Ejecutar el commit */
+            $miDB->commit();
+
+            /* si todo ha ido bien mostramos el mensage de exito. */
             echo '
                             <div class="w3-panel w3-blue">
                             <h3>Information!</h3>
                             <p>Se ha insertado todo bien.</p>
                             </div>';
-            $miDB->commit();
         } catch (PDOException $exception) {
             $miDB->rollback();
             /* Si hay algun error el try muestra el error del codigo */

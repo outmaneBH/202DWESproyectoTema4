@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ejercicio2.0 PDO</title>
+        <title>Ejercicio2 - PDO</title>
         <style>
             table,tr,td,th{
                 border-collapse: collapse;

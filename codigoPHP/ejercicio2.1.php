@@ -11,6 +11,7 @@
                 <th>Volumen del negocio</th>
             </tr>
             <?php
+            /*
 //llamar al fichero de connction
             require '../config/confDBMySQL.php';
 
@@ -40,7 +41,7 @@
             } else {
                 echo "no hay resultados";
             }
-            $miDB->close()
+            $miDB->close()*/
             ?>
         </table>
     </body>

@@ -36,7 +36,7 @@
                         <td>2. Mostrar el contenido de la tabla Departamento y el número de registros.</td>
                         <td><a href="codigoPHP/ejercicio2.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio2.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio2.1.php.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio2.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio2.1.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
@@ -44,8 +44,8 @@
                         <td>3. Formulario para añadir un departamento a la tabla Departamento con validación de entrada y
                             control de errores.</td>
                         <td><a href="codigoPHP/ejercicio3.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                       
+                        <td><a href="mostrarcodigo/muestraEjercicio3.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+
                     </tr>
 
                     <tr>
@@ -53,7 +53,7 @@
                             DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).</td>
                         <td><a href="codigoPHP/ejercicio4.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio4.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                       
+
                     </tr>
 
                     <tr>
@@ -61,7 +61,7 @@
                             insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.</td>
                         <td><a href="codigoPHP/ejercicio5.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio5.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                
+
                     </tr>
 
                     <tr>
@@ -71,9 +71,17 @@
                             pasando los parámetros en un array a execute.</td>
                         <td><a href="codigoPHP/ejercicio6.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio6.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                      
+
                     </tr>
-                   
+                    <tr>
+                        <td>7. Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
+                            Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
+                            directorio .../tmp/ del servidor.</td>
+                        <td><a href="codigoPHP/ejercicio7.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio7.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+
+                    </tr>
+
 
 
                 </tbody>
@@ -85,18 +93,18 @@
                 <!-- Section: Social media -->
                 <section class="mb-3">
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button">
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/outmaneBH/proyectoTema4/tree/developer" role="button">
                         <img id="git" style="width: 30px" src="webroot/media/icons/git.png" alt="github"/>  
                     </a>
                 </section>
-          
+
             </div>
             <!-- Grid container -->
 
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 Copyrights © 2021 
-                <a class="text-white" href="#">OUTMANE BOUHOU</a>
+                <a class="text-white" href="https://github.com/outmaneBH/proyectoTema4/tree/developer">OUTMANE BOUHOU</a>
                 . All rights reserved.
             </div>
             <!-- Copyright -->
