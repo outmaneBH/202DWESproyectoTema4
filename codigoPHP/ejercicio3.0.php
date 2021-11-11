@@ -95,9 +95,6 @@
                 }
             }
 
-
-
-
             //recorrer el array de errores
             foreach ($aErrores as $nombreCampo => $value) {
                 //Comprobar si el campo ha sido rellenado
