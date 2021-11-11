@@ -68,7 +68,6 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
             //Comprobar si el campo description  esta rellenado 
             $aErrores["description"] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['description'], 1000, 2, OPCIONAL);
 
-
             //recorrer el array de errores
             foreach ($aErrores as $nombreCampo => $value) {
                 //Comprobar si el campo ha sido rellenado
@@ -120,12 +119,17 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
                                     <?php
                                     $registroObjeto = $resultadoConsulta->fetchObject();
                                 }
+                                 echo '
+                            <div class="w3-panel w3-blue">
+                            <h3>Information!</h3>
+                            <p>hay '.$resultadoConsulta->rowCount().' resultados.</p>
+                            </div>';
                             } else {
                                 /* mostrar el numero de registros que hemos seleccionado */
                                 echo '
                             <div class="w3-panel w3-blue">
                             <h3>Information!</h3>
-                            <p>No hay resultados sobre este description.</p>
+                            <p>hay '.$resultadoConsulta->rowCount().' resultados.</p>
                             </div>';
                             }
                         

@@ -21,7 +21,7 @@
         /* Llamar al fichero de configuracion de base de datos */
         require_once '../config/confDBPDO.php';
         try {
-            
+
             /* Establecemos la connection con pdo */
             $miDB = new PDO(HOST, USER, PASSWORD);
 
@@ -32,7 +32,7 @@
             $aDepartamentos = [["CodDepartamento" => 'ARB', "DescDepartamento" => 'departamento ARB', "VolumenNegocio" => 2000],
                 ["CodDepartamento" => 'ORS', "DescDepartamento" => 'departamento ORS', "VolumenNegocio" => 900],
                 ["CodDepartamento" => 'OBS', "DescDepartamento" => 'departamento OBS', "VolumenNegocio" => 1899]];
-            
+
             /* Insertamos datos en nuestro tabla con insert uy con prepare */
             $sql = "
                    INSERT INTO Departamento (CodDepartamento, DescDepartamento, VolumenNegocio) VALUES 

@@ -36,7 +36,7 @@ OB;
 insert into Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) values 
 ('AKL', 'departamento AKL', null, 10000)
 OB;
-              $sql3 = <<<OB
+            $sql3 = <<<OB
 insert into Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) values 
 ('ABS', 'departamento ABS', null, 15)
 OB;

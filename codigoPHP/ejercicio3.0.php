@@ -24,10 +24,10 @@
             #div2{
                 padding: 20px;
             }
-             #t2 {
+            #t2 {
                 text-align: center;
             }
-           
+
         </style>
     </head>
     <body>
@@ -38,11 +38,11 @@
          * Fecha: 09/11/2021
          * description: 3.Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores.
          */
-        //Cambiar el try catch();
+
 
         /* usar la libreria de validacion */
         require_once '../core/210322ValidacionFormularios.php';
-        
+
         /* Llamar al fichero de configuracion de base de datos */
         require_once '../config/confDBPDO.php';
 
@@ -83,17 +83,19 @@
 
             //Comprobar si el campo salary  esta rellenado 
             $aErrores["salary"] = validacionFormularios::comprobarFloat($_REQUEST['salary'], 10000, 1, OBLIGATORIO);
-            
-     
 
-            /* comprobamos si el codigo existe en la base de datos */
-            $sql = "SELECT CodDepartamento from Departamento where CodDepartamento='" . $_REQUEST['codeDep'] . "'";
-            $resultadoConsulta = $miDB->query($sql);
+            if(!$aErrores["codeDep"]) {
+                /* comprobamos si el codigo existe en la base de datos */
+                $sql = "SELECT CodDepartamento from Departamento where CodDepartamento='" . $_REQUEST['codeDep'] . "'";
+                $resultadoConsulta = $miDB->query($sql);
 
-            /* Si existe mostramos el error que esta */
-            if ($resultadoConsulta->rowCount() > 0) {
-                $aErrores['codeDep'] = "Ya existe ese código";
+                /* Si existe mostramos el error que esta */
+                if ($resultadoConsulta->rowCount() > 0) {
+                    $aErrores['codeDep'] = "Ya existe ese código";
+                }
             }
+
+
 
 
             //recorrer el array de errores
@@ -138,16 +140,16 @@
                             <h3>Success!</h3>
                             <p>Se ha insertado  ' . $numRegistros . ' nuevo registro.</p>
                             </div>';
-                      
+
                         /* Seleccionamos toda la tabla ademas el nuevo registro */
                         $sql = 'SELECT * FROM DAW202DBDepartamentos.Departamento';
 
                         /* esto es un objeto de clase PDOStatement */
                         $resultadoConsulta = $miDB->query($sql);
 
-                        /*Recorrer el resultado de la consulta*/
+                        /* Recorrer el resultado de la consulta */
                         $registroObjeto = $resultadoConsulta->fetchObject();
-                        
+
                         while ($registroObjeto) {
 
                             //Mostrar los datos correctos obligatorios
@@ -165,19 +167,19 @@
                     </table>
                 </div><?php
             } catch (PDOException $exception) {
-                /*Si hay algun error el try muestra el error del codigo*/
+                /* Si hay algun error el try muestra el error del codigo */
                 echo '<span> Codigo del Error :' . $exception->getCode() . '</span> <br>';
-                
-                /*Muestramos su mensage de error*/
+
+                /* Muestramos su mensage de error */
                 echo '<span> Error :' . $exception->getMessage() . '</span> <br>';
             } finally {
-                /*Ceramos la connection */
+                /* Ceramos la connection */
                 unset($miDB);
             }
         } else {
             //Mostrar el formulario hasta que lo rellenemos correctamente
             //Mostrar formulario
-            ?>
+                    ?>
             <div>
                 <table id="t1">
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">

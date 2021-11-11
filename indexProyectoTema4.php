@@ -79,7 +79,17 @@
                             directorio .../tmp/ del servidor.</td>
                         <td><a href="codigoPHP/ejercicio7.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio7.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-
+                    </tr>
+                    <tr>
+                        <td>8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+                            fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+                            encuentra en el directorio .../tmp/ del servidor.
+                            Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
+                            JSON, CSV, TXT,...
+                            Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
+                            el equipo cliente.</td>
+                        <td><a href="codigoPHP/ejercicio8.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio8.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                     </tr>
 
 
