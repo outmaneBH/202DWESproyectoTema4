@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
+                        <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td> 
                         <td><a href="codigoPHP/ejercicio1.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio1.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                         <td><a href="codigoPHP/ejercicio1.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
@@ -34,37 +34,34 @@
 
                     <tr>
                         <td>2. Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio2.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio2.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio2.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio2.1.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
                     <tr>
                         <td>3. Formulario para añadir un departamento a la tabla Departamento con validación de entrada y
                             control de errores.</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio3.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio3.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+
                     </tr>
 
                     <tr>
                         <td>4. Formulario   de   búsqueda   de   departamentos   por   descripción   (por   una   parte   del   campo
                             DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio4.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio4.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+
                     </tr>
 
                     <tr>
                         <td> 5. Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
                             insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio5.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio5.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+
                     </tr>
 
                     <tr>
@@ -72,12 +69,33 @@
                             utilizando una consulta preparada. (Después de programar y entender este ejercicio, modificar los
                             ejercicios anteriores para que utilicen consultas preparadas). Probar consultas preparadas sin bind,
                             pasando los parámetros en un array a execute.</td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio6.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio6.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+
                     </tr>
-                   
+                    <tr>
+                        <td>7. Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
+                            Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
+                            directorio .../tmp/ del servidor.</td>
+                        <td><a href="codigoPHP/ejercicio7.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio7.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                    </tr>
+                    <tr>
+                        <td>8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+                            fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+                            encuentra en el directorio .../tmp/ del servidor.
+                            Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
+                            JSON, CSV, TXT,...
+                            Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
+                            el equipo cliente.</td>
+                        <td><a href="codigoPHP/ejercicio8json.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                    </tr>
+<tr>
+                        <td>9.JSON</td>
+                        <td><a href="#"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="#"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                    </tr>
 
 
                 </tbody>
@@ -89,18 +107,18 @@
                 <!-- Section: Social media -->
                 <section class="mb-3">
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button">
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/outmaneBH/proyectoTema4/tree/developer" role="button">
                         <img id="git" style="width: 30px" src="webroot/media/icons/git.png" alt="github"/>  
                     </a>
                 </section>
-          
+
             </div>
             <!-- Grid container -->
 
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 Copyrights © 2021 
-                <a class="text-white" href="#">OUTMANE BOUHOU</a>
+                <a class="text-white" href="https://github.com/outmaneBH/proyectoTema4/tree/developer">OUTMANE BOUHOU</a>
                 . All rights reserved.
             </div>
             <!-- Copyright -->

@@ -1,4 +1,6 @@
 <?php
-define("HOST","mysql:host=192.168.3.102;bname=DAW202DBDepartamentos" );
-define("USER","usuarioDAW202DBDepartamentos" );
-define("PASSWORD","P@ssw0rd" );
+//Entorno de desarollo
+define("HOST","mysql:host=daw202.sauces.local;dbname=DB202DWESProyectoTema4" );
+define("USER","User202DWESProyectoTema4" );
+define("PASSWORD","paso" );
+?>
