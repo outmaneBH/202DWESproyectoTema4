@@ -8,8 +8,7 @@
     </head>
     <body>
         <?php
-       highlight_file("../codigoPHP/ejercicio8.0.php");
+       highlight_file("../codigoPHP/ejercicio8json.php");
         ?>
-       
     </body>
 </html>

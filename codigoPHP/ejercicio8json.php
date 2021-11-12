@@ -48,7 +48,7 @@
             print_r($array);
 
             $json = json_encode($array);
-            $bytes = file_put_contents("/tmp/myfile.json", $json);
+            $bytes = file_put_contents("../tmp/myfile.json", $json);
             echo "The number of bytes written are $bytes.";
         } catch (PDOException $exception) {
 

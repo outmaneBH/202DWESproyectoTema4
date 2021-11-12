@@ -38,7 +38,7 @@
 
                 <?php
                 //select el contenido de la tabla con select 
-                $sql = 'SELECT * FROM DAW202DBDepartamentos.Departamento';
+                $sql = 'SELECT * FROM Departamento';
                 
                 //esto es un objeto de clase PDOStatement
                 $resultadoConsulta = $miDB->query($sql);

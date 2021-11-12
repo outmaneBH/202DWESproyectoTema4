@@ -8,7 +8,6 @@
         </style>
     </head>
     <body>
-
         <?php
         /*
          * author: OUTMANE BOUHOU

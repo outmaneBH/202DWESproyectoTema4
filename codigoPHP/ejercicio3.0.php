@@ -128,7 +128,7 @@
                     try {
 
                         /* insertamos los valores que hemos cogido desde el formolario */
-                        $insert = ' INSERT INTO DAW202DBDepartamentos.Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) VALUES ("' . $aRespuestas['codeDep'] . '","' . $aRespuestas['description'] . '", null,"' . $aRespuestas['salary'] . '")';
+                        $insert = ' INSERT INTO Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) VALUES ("' . $aRespuestas['codeDep'] . '","' . $aRespuestas['description'] . '", null,"' . $aRespuestas['salary'] . '")';
                         $numRegistros = $miDB->exec($insert);
 
                         /* mostrar el numero de registros que hemos seleccionado */
@@ -139,7 +139,7 @@
                             </div>';
 
                         /* Seleccionamos toda la tabla ademas el nuevo registro */
-                        $sql = 'SELECT * FROM DAW202DBDepartamentos.Departamento';
+                        $sql = 'SELECT * FROM Departamento';
 
                         /* esto es un objeto de clase PDOStatement */
                         $resultadoConsulta = $miDB->query($sql);
