@@ -25,11 +25,14 @@
             $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             /* Seleccionamos toda la tabla y preparamos la consulta y ejecutamos */
-            $sql = "SELECT * from Departamento";
+            $sql = "SELECT * FROM Departamento";
             $consulta = $miDB->prepare($sql);
             $consulta->execute();
+            
 
-            $xmlfile = new DOMDocument("1.0");
+            $xmlfile = new DOMDocument();
+            
+            /*formtear la salida de el ficher xml*/
             $xmlfile->formatOutput = true;
 
             /* Creamos el raiz departamentos en el fichero xml */
@@ -52,9 +55,8 @@
                 $registro = $consulta->fetchObject();
             }
             /*finalmente exportamos el fichero al ../tmp/tablaDepartamento.xml */
-            $xmlfile->save("../tmp/tablaDepartamento.xml");
-            echo '
-                            <div class="w3-panel w3-blue">
+            $xmlfile->save('../tmp/tablaDepartamento.xml');
+            echo '          <div class="w3-panel w3-blue">
                             <h3>Information!</h3>
                             <p>Se ha insertado todo bien.</p>
                             </div>';
@@ -64,6 +66,7 @@
 
             /* Muestramos su mensage de error */
             echo '<span> Error :' . $exception->getMessage() . '</span> <br>';
+            
         } finally {
             unset($miDB);
         }

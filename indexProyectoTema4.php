@@ -88,13 +88,13 @@
                             JSON, CSV, TXT,...
                             Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
                             el equipo cliente.</td>
-                        <td><a href="codigoPHP/ejercicio8json.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio8xml.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio8xml.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                     </tr>
 <tr>
-                        <td>9.JSON</td>
-                        <td><a href="#"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="#"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td>8. usar JSON</td>
+                        <td><a href="codigoPHP/ejercicio8json.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio8json.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                     </tr>
 
 

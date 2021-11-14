@@ -8,7 +8,7 @@
                 color:red;
             }
             #t1{
-                
+
                 position: relative;
                 left:  33%;
                 top: 110px;
@@ -18,7 +18,7 @@
             #t1 td{
                 padding: 20px;
             }
-            
+
         </style>
     </head>
     <body>
@@ -28,7 +28,7 @@
          * author: OUTMANE BOUHOU
          * Fecha: 09/11/2021
          * description: 4. Formulario   de   búsqueda   de   departamentos   por   descripción   (por   una   parte   del   campo
-DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos)
+          DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos)
          */
 
         /* usar la libreria de validacion */
@@ -85,9 +85,7 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
             //Tratamiento del formulario - Tratamiento de datos OK
             /* almacenamos los datos correctos */
             $aRespuestas = [
-           
                 "description" => $_REQUEST['description']
-           
             ];
             ?>
             <div id="div2">
@@ -97,60 +95,60 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
                         <th>Descripción</th>
                         <th>Volumen del negocio</th>
                     </tr>
-                    <?php
-                    try {
-                            $sql2 = "SELECT * from Departamento where DescDepartamento like  '%" . $_REQUEST['description'] . "%'";
-                            $resultadoConsulta = $miDB->query($sql2);
+    <?php
+    try {
+        $sql2 = "SELECT * from Departamento where DescDepartamento like  '%" . $_REQUEST['description'] . "%'";
+        $resultadoConsulta = $miDB->prepare($sql);
+        $resultadoConsulta->execute();
 
-                            if ($resultadoConsulta->rowCount() > 0) {
-                                /* Recorrer el resultado de la consulta */
-                                $registroObjeto = $resultadoConsulta->fetchObject();
+        if ($resultadoConsulta->rowCount() > 0) {
+            /* Recorrer el resultado de la consulta */
+            $registroObjeto = $resultadoConsulta->fetchObject();
 
-                                while ($registroObjeto) {
+            while ($registroObjeto) {
 
-                                    //Mostrar los datos correctos obligatorios
-                                    ?>
-                                    <tr>
-                                        <td><?php echo $registroObjeto->CodDepartamento; ?></td>
-                                        <td><?php echo $registroObjeto->DescDepartamento; ?></td>
-                                        <td><?php echo $registroObjeto->VolumenNegocio; ?></td>
-                                    </tr>
+                //Mostrar los datos correctos obligatorios
+                ?>
+                                <tr>
+                                    <td><?php echo $registroObjeto->CodDepartamento; ?></td>
+                                    <td><?php echo $registroObjeto->DescDepartamento; ?></td>
+                                    <td><?php echo $registroObjeto->VolumenNegocio; ?></td>
+                                </tr>
 
-                                    <?php
-                                    $registroObjeto = $resultadoConsulta->fetchObject();
-                                }
-                                 echo '
+                <?php
+                $registroObjeto = $resultadoConsulta->fetchObject();
+            }
+            echo '
                             <div class="w3-panel w3-blue">
                             <h3>Information!</h3>
-                            <p>hay '.$resultadoConsulta->rowCount().' resultados.</p>
+                            <p>hay ' . $resultadoConsulta->rowCount() . ' resultados.</p>
                             </div>';
-                            } else {
-                                /* mostrar el numero de registros que hemos seleccionado */
-                                echo '
+        } else {
+            /* mostrar el numero de registros que hemos seleccionado */
+            echo '
                             <div class="w3-panel w3-blue">
                             <h3>Information!</h3>
-                            <p>hay '.$resultadoConsulta->rowCount().' resultados.</p>
+                            <p>hay ' . $resultadoConsulta->rowCount() . ' resultados.</p>
                             </div>';
-                            }
-                        
-                        ?>
+        }
+        ?>
                     </table>
                 </div>
-                <?php
-            } catch (PDOException $exception) {
-                /* Si hay algun error el try muestra el error del codigo */
-                echo '<span> Codigo del Error :' . $exception->getCode() . '</span> <br>';
+                        <?php
+                    } catch (PDOException $exception) {
+                        /* Si hay algun error el try muestra el error del codigo */
+                        echo '<span> Codigo del Error :' . $exception->getCode() . '</span> <br>';
 
-                /* Muestramos su mensage de error */
-                echo '<span> Error :' . $exception->getMessage() . '</span> <br>';
-            } finally {
-                /* Ceramos la connection */
-                unset($miDB);
-            }
-        } else {
-            //Mostrar el formulario hasta que lo rellenemos correctamente
-            //Mostrar formulario
-            ?>
+                        /* Muestramos su mensage de error */
+                        echo '<span> Error :' . $exception->getMessage() . '</span> <br>';
+                    } finally {
+                        /* Ceramos la connection */
+                        unset($miDB);
+                    }
+                } else {
+                    //Mostrar el formulario hasta que lo rellenemos correctamente
+                    //Mostrar formulario
+                    ?>
             <div>
                 <table id="t1">
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -172,9 +170,9 @@ DescDepartamento, si el usuario no pone nada deben aparecer todos los departamen
                 </table>
 
             </div>
-            <?php
-        }
-        ?>
+    <?php
+}
+?>
 
 
 

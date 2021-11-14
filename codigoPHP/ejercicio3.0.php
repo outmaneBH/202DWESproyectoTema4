@@ -141,8 +141,9 @@
                         /* Seleccionamos toda la tabla ademas el nuevo registro */
                         $sql = 'SELECT * FROM Departamento';
 
-                        /* esto es un objeto de clase PDOStatement */
-                        $resultadoConsulta = $miDB->query($sql);
+                        /* usar las consultas preparadas */
+                        $resultadoConsulta = $miDB->prepare($sql);
+                        $resultadoConsulta->execute();
 
                         /* Recorrer el resultado de la consulta */
                         $registroObjeto = $resultadoConsulta->fetchObject();

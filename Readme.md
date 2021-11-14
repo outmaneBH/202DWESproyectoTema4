@@ -1,6 +1,6 @@
-## PROYECTOTEMA4
+##DWES - PROYECTOTEMA4
 
-proyectoTema4 v.1
+proyectoTema4 v.1 ,usando la base de datos con funciones de crud.
 
 ## ENTORNO DE DESAROLLO
 * Apache2.4
@@ -8,6 +8,7 @@ proyectoTema4 v.1
 * Mysql 8.0
 * Xdebug 2.9
 * phpMyadmin
+
 ## link entorno  de explotación
  http://daw202.sauces.local/proyectoTema4/indexProyectoTema4.php
 

@@ -13,9 +13,11 @@
         /*
          * author: OUTMANE BOUHOU
          * Fecha: 11/11/2021
-         * description:8.Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
-          Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
-          directorio .../tmp/ del servidor.
+         * description:Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+          fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+          encuentra en el directorio .../tmp/ del servidor.
+          Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
+          JSON, CSV, TXT,...
          */
         /* Llamar al fichero de configuracion de base de datos */
         require_once '../config/confDBPDO.php';
@@ -37,13 +39,12 @@
             echo '<p style="color: blue"> <strong>Número de registros: ' . $numRegistros . '</strong></p>';
 
 
-            foreach ($resultadoConsulta as $row) { 
+            foreach ($resultadoConsulta as $row) {
                 $array = [
                     "codeDep" => $row["CodDepartamento"],
                     "description" => $row['DescDepartamento'],
                     "salary" => $row['VolumenNegocio']
                 ];
-                
             }
             print_r($array);
 
