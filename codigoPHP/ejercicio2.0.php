@@ -54,7 +54,8 @@
                             </div>';
                
                 $registroObjeto = $resultadoConsulta->fetchObject();
-               
+               /*Recorrer con while los registros*/
+                
                 while ($registroObjeto) {
                     ?>
                     <tr>

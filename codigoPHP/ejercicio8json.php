@@ -28,7 +28,8 @@
 
             /* configurar las excepcion */
             $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//select el contenido de la tabla con select 
+
+            /* select el contenido de la tabla con select ^ */
             $sql = 'SELECT * FROM Departamento';
 
             //esto es un objeto de clase PDOStatement
@@ -36,21 +37,32 @@
 
             //mostrar el numero de registros que hemos seleccionado
             $numRegistros = $resultadoConsulta->rowCount();
-            echo '<p style="color: blue"> <strong>Número de registros: ' . $numRegistros . '</strong></p>';
+            echo '
+                            <div class="w3-panel w3-blue">
+                            <h3>Information!</h3>
+                            <p>Número de registros: ' . $numRegistros .'</p>
+                            </div>';
+         
 
-
-            foreach ($resultadoConsulta as $row) {
-                $array = [
-                    "codeDep" => $row["CodDepartamento"],
-                    "description" => $row['DescDepartamento'],
-                    "salary" => $row['VolumenNegocio']
+            $aDepartamentos = ["Departametos"];
+            foreach ($resultadoConsulta as $clave => $valor) {
+                $aDepartamento = ["Deparatemento :"=>$clave,
+                    "codeDep" => $valor["CodDepartamento"],
+                    "description" => $valor['DescDepartamento'],
+                    "salary" => $valor['VolumenNegocio']
                 ];
+                array_push($aDepartamentos, $aDepartamento);
             }
-            print_r($array);
+            print_r($aDepartamentos);
 
-            $json = json_encode($array);
-            $bytes = file_put_contents("../tmp/myfile.json", $json);
-            echo "The number of bytes written are $bytes.";
+            $json = json_encode($aDepartamentos, JSON_PRETTY_PRINT);
+            $bytes = file_put_contents("../tmp/tablaDepartamento.json", $json);
+             echo '
+                            <div class="w3-panel w3-blue">
+                            <h3>Information!</h3>
+                            <p>The number of bytes written are '.$bytes.'</p>
+                            </div>';
+            
         } catch (PDOException $exception) {
 
             /* Si hay algun error el try muestra el error del codigo */

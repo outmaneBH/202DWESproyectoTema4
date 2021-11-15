@@ -47,8 +47,7 @@
 
         /* definir un array para alamcenar errores del description */
         $aErrores = [
-            "description" => null
-        ];
+            "description" => null];
 
         /* Array de respuestas inicializado a null */
         $aRespuestas = ["description" => null
@@ -84,9 +83,7 @@
         if ($entradaOK) {
             //Tratamiento del formulario - Tratamiento de datos OK
             /* almacenamos los datos correctos */
-            $aRespuestas = [
-                "description" => $_REQUEST['description']
-            ];
+            
             ?>
             <div id="div2">
                 <table id="t2" class="w3-table w3-bordered">
@@ -97,7 +94,10 @@
                     </tr>
     <?php
     try {
-        $sql2 = "SELECT * from Departamento where DescDepartamento like  '%" . $_REQUEST['description'] . "%'";
+        $aRespuestas = [
+                "description" => $_REQUEST['description']
+            ];
+        $sql = "SELECT * from Departamento where DescDepartamento like  '%" . $aRespuestas['description'] . "%'";
         $resultadoConsulta = $miDB->prepare($sql);
         $resultadoConsulta->execute();
 
