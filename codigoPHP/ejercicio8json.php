@@ -13,9 +13,11 @@
         /*
          * author: OUTMANE BOUHOU
          * Fecha: 11/11/2021
-         * description:8.Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
-          Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
-          directorio .../tmp/ del servidor.
+         * description:Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+          fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+          encuentra en el directorio .../tmp/ del servidor.
+          Si el alumno dispone de tiempo probar distintos formatos de importación - exportación: XML,
+          JSON, CSV, TXT,...
          */
         /* Llamar al fichero de configuracion de base de datos */
         require_once '../config/confDBPDO.php';
@@ -26,7 +28,8 @@
 
             /* configurar las excepcion */
             $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//select el contenido de la tabla con select 
+
+            /* select el contenido de la tabla con select ^ */
             $sql = 'SELECT * FROM Departamento';
 
             //esto es un objeto de clase PDOStatement
@@ -34,22 +37,32 @@
 
             //mostrar el numero de registros que hemos seleccionado
             $numRegistros = $resultadoConsulta->rowCount();
-            echo '<p style="color: blue"> <strong>Número de registros: ' . $numRegistros . '</strong></p>';
+            echo '
+                            <div class="w3-panel w3-blue">
+                            <h3>Information!</h3>
+                            <p>Número de registros: ' . $numRegistros .'</p>
+                            </div>';
+         
 
-
-            foreach ($resultadoConsulta as $row) { 
-                $array = [
-                    "codeDep" => $row["CodDepartamento"],
-                    "description" => $row['DescDepartamento'],
-                    "salary" => $row['VolumenNegocio']
+            $aDepartamentos = ["Departametos"];
+            foreach ($resultadoConsulta as $clave => $valor) {
+                $aDepartamento = ["Deparatemento :"=>$clave,
+                    "codeDep" => $valor["CodDepartamento"],
+                    "description" => $valor['DescDepartamento'],
+                    "salary" => $valor['VolumenNegocio']
                 ];
-                
+                array_push($aDepartamentos, $aDepartamento);
             }
-            print_r($array);
+            print_r($aDepartamentos);
 
-            $json = json_encode($array);
-            $bytes = file_put_contents("../tmp/myfile.json", $json);
-            echo "The number of bytes written are $bytes.";
+            $json = json_encode($aDepartamentos, JSON_PRETTY_PRINT);
+            $bytes = file_put_contents("../tmp/tablaDepartamento.json", $json);
+             echo '
+                            <div class="w3-panel w3-blue">
+                            <h3>Information!</h3>
+                            <p>The number of bytes written are '.$bytes.'</p>
+                            </div>';
+            
         } catch (PDOException $exception) {
 
             /* Si hay algun error el try muestra el error del codigo */

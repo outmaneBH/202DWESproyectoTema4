@@ -84,16 +84,31 @@
             //Comprobar si el campo salary  esta rellenado 
             $aErrores["salary"] = validacionFormularios::comprobarFloat($_REQUEST['salary'], 10000, 1, OBLIGATORIO);
 
-            if(!$aErrores["codeDep"]) {
+            if (!$aErrores["codeDep"]) {
                 /* comprobamos si el codigo existe en la base de datos */
-                $sql = "SELECT CodDepartamento from Departamento where CodDepartamento='" . $_REQUEST['codeDep'] . "'";
+                try {
+                    $sql = "SELECT CodDepartamento from Departamento where CodDepartamento='" . $_REQUEST['codeDep'] . "'";
                 $resultadoConsulta = $miDB->query($sql);
 
                 /* Si existe mostramos el error que esta */
                 if ($resultadoConsulta->rowCount() > 0) {
                     $aErrores['codeDep'] = "Ya existe ese código";
                 }
+                    
+                } catch (PDOException $exception) {
+                /* Si hay algun error el try muestra el error del codigo */
+                echo '<span> Codigo del Error :' . $exception->getCode() . '</span> <br>';
+
+                /* Muestramos su mensage de error */
+                echo '<span> Error :' . $exception->getMessage() . '</span> <br>';
+            } finally {
+                /* Ceramos la connection */
+                unset($miDB);
             }
+                
+            }
+
+
 
             //recorrer el array de errores
             foreach ($aErrores as $nombreCampo => $value) {
@@ -141,8 +156,9 @@
                         /* Seleccionamos toda la tabla ademas el nuevo registro */
                         $sql = 'SELECT * FROM Departamento';
 
-                        /* esto es un objeto de clase PDOStatement */
-                        $resultadoConsulta = $miDB->query($sql);
+                        /* usar las consultas preparadas */
+                        $resultadoConsulta = $miDB->prepare($sql);
+                        $resultadoConsulta->execute();
 
                         /* Recorrer el resultado de la consulta */
                         $registroObjeto = $resultadoConsulta->fetchObject();
@@ -176,7 +192,7 @@
         } else {
             //Mostrar el formulario hasta que lo rellenemos correctamente
             //Mostrar formulario
-                    ?>
+            ?>
             <div>
                 <table id="t1">
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">

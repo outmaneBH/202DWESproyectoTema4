@@ -24,6 +24,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!--Mostrar codigo de scripts-->
                     <tr>
                         <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td> 
                         <td><a href="codigoPHP/ejercicio1.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
@@ -74,11 +75,16 @@
 
                     </tr>
                     <tr>
-                        <td>7. Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
+                        <td>7. XML - Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
                             Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
                             directorio .../tmp/ del servidor.</td>
-                        <td><a href="codigoPHP/ejercicio7.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio7.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio7xml.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio7xml.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                    </tr>
+                     <tr>
+                        <td>7. USANDO JSON </td>
+                        <td><a href="codigoPHP/ejercicio7json.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio7json.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                     </tr>
                     <tr>
                         <td>8. Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
@@ -88,13 +94,13 @@
                             JSON, CSV, TXT,...
                             Si el alumno dispone de tiempo probar a exportar e importar  a o desde un directorio (a elegir) en
                             el equipo cliente.</td>
-                        <td><a href="codigoPHP/ejercicio8json.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio8xml.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio8xml.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                     </tr>
 <tr>
-                        <td>9.JSON</td>
-                        <td><a href="#"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="#"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td>8. USANDO JSON</td>
+                        <td><a href="codigoPHP/ejercicio8json.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio8json.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                     </tr>
 
 
@@ -107,7 +113,7 @@
                 <!-- Section: Social media -->
                 <section class="mb-3">
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/outmaneBH/proyectoTema4/tree/developer" role="button">
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/outmaneBH/202DWESproyectoTema4" role="button">
                         <img id="git" style="width: 30px" src="webroot/media/icons/git.png" alt="github"/>  
                     </a>
                 </section>
@@ -118,7 +124,7 @@
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 Copyrights © 2021 
-                <a class="text-white" href="https://github.com/outmaneBH/proyectoTema4/tree/developer">OUTMANE BOUHOU</a>
+                <a class="text-white" href="https://github.com/outmaneBH/202DWESproyectoTema4">OUTMANE BOUHOU</a>
                 . All rights reserved.
             </div>
             <!-- Copyright -->

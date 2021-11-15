@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Ejercicio2 - PDO</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
             table,tr,td,th{
                 border-collapse: collapse;
@@ -40,15 +41,21 @@
                 //select el contenido de la tabla con select 
                 $sql = 'SELECT * FROM Departamento';
                 
-                //esto es un objeto de clase PDOStatement
-                $resultadoConsulta = $miDB->query($sql);
+                //usamos las consultas preparadas
+                
+                $resultadoConsulta = $miDB->prepare($sql);
+                $resultadoConsulta->execute();
                 
                 //mostrar el numero de registros que hemos seleccionado
-                $numRegistros = $resultadoConsulta->rowCount();
-                echo '<p style="color: blue"> <strong>Número de registros: ' . $numRegistros . '</strong></p>';
-
-                $registroObjeto = $resultadoConsulta->fetchObject();
+                echo '
+                            <div class="w3-panel w3-blue">
+                            <h3>Information!</h3>
+                            <p>hay '.$resultadoConsulta->rowCount().' resultados.</p>
+                            </div>';
                
+                $registroObjeto = $resultadoConsulta->fetchObject();
+               /*Recorrer con while los registros*/
+                
                 while ($registroObjeto) {
                     ?>
                     <tr>

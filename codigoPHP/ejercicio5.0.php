@@ -12,6 +12,9 @@
     <body>
 
         <?php
+        /*1-CAMBIAR EL EJERCICIO A CUNSULTAS PREPARADAS*/
+        
+        
         /*
          * author: OUTMANE BOUHOU
          * Fecha: 09/11/2021
@@ -55,6 +58,7 @@ OB;
         } catch (PDOException $exception) {
             /* Confirma los cambios y los consolida */
             $miDB->rollback();
+            
             /* Si hay algun error el try muestra el error del codigo */
             echo '<span> Codigo del Error :' . $exception->getCode() . '</span> <br>';
 
