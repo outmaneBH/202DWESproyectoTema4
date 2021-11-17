@@ -81,7 +81,7 @@
                         <td><a href="codigoPHP/ejercicio7xml.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio7xml.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td>7. USANDO JSON </td>
                         <td><a href="codigoPHP/ejercicio7json.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio7json.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
@@ -97,10 +97,16 @@
                         <td><a href="codigoPHP/ejercicio8xml.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio8xml.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                     </tr>
-<tr>
+                    <tr>
                         <td>8. USANDO JSON</td>
                         <td><a href="codigoPHP/ejercicio8json.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio8json.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                    </tr>
+                    <tr>
+                        <td>9. Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio
+                            GIT</td>
+                        <td><a href="../202DWESMtoproyectoTema4/indexMtoproyectoTema4.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                 
                     </tr>
 
 
@@ -113,7 +119,7 @@
                 <!-- Section: Social media -->
                 <section class="mb-3">
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/outmaneBH/202DWESproyectoTema4" role="button">
+                    <a class="btn btn-outline-light btn-floating m-1"  href="https://github.com/outmaneBH/202DWESproyectoTema4" target="_blank"  role="button">
                         <img id="git" style="width: 30px" src="webroot/media/icons/git.png" alt="github"/>  
                     </a>
                 </section>
@@ -124,7 +130,7 @@
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 Copyrights © 2021 
-                <a class="text-white" href="https://github.com/outmaneBH/202DWESproyectoTema4">OUTMANE BOUHOU</a>
+                <a class="text-white"   href="https://github.com/outmaneBH/202DWESproyectoTema4" target="_blank" >OUTMANE BOUHOU</a>
                 . All rights reserved.
             </div>
             <!-- Copyright -->

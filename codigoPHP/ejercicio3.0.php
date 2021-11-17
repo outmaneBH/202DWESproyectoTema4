@@ -64,11 +64,6 @@
             "salary" => null
         ];
 
-        /* Establecemos la connection con pdo en global */
-        $miDB = new PDO(HOST, USER, PASSWORD);
-
-        /* configurar las excepcion */
-        $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
         /* comprobar si ha pulsado el button enviar */
@@ -87,25 +82,29 @@
             if (!$aErrores["codeDep"]) {
                 /* comprobamos si el codigo existe en la base de datos */
                 try {
+                    /* Establecemos la connection con pdo en global */
+                    $miDB = new PDO(HOST, USER, PASSWORD);
+
+                    /* configurar las excepcion */
+                    $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
                     $sql = "SELECT CodDepartamento from Departamento where CodDepartamento='" . $_REQUEST['codeDep'] . "'";
-                $resultadoConsulta = $miDB->query($sql);
+                    $resultadoConsulta = $miDB->query($sql);
 
-                /* Si existe mostramos el error que esta */
-                if ($resultadoConsulta->rowCount() > 0) {
-                    $aErrores['codeDep'] = "Ya existe ese código";
-                }
-                    
+                    /* Si existe mostramos el error que esta */
+                    if ($resultadoConsulta->rowCount() > 0) {
+                        $aErrores['codeDep'] = "Ya existe ese código";
+                    }
                 } catch (PDOException $exception) {
-                /* Si hay algun error el try muestra el error del codigo */
-                echo '<span> Codigo del Error :' . $exception->getCode() . '</span> <br>';
+                    /* Si hay algun error el try muestra el error del codigo */
+                    echo '<span> Codigo del Error :' . $exception->getCode() . '</span> <br>';
 
-                /* Muestramos su mensage de error */
-                echo '<span> Error :' . $exception->getMessage() . '</span> <br>';
-            } finally {
-                /* Ceramos la connection */
-                unset($miDB);
-            }
-                
+                    /* Muestramos su mensage de error */
+                    echo '<span> Error :' . $exception->getMessage() . '</span> <br>';
+                } finally {
+                    /* Ceramos la connection */
+                    unset($miDB);
+                }
             }
 
 
@@ -139,44 +138,50 @@
                         <th>Descripción</th>
                         <th>Volumen del negocio</th>
                     </tr>
-                    <?php
-                    try {
+    <?php
+    try {
+        /* Establecemos la connection con pdo en global */
+        $miDB = new PDO(HOST, USER, PASSWORD);
 
-                        /* insertamos los valores que hemos cogido desde el formolario */
-                        $insert = ' INSERT INTO Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) VALUES ("' . $aRespuestas['codeDep'] . '","' . $aRespuestas['description'] . '", null,"' . $aRespuestas['salary'] . '")';
-                        $numRegistros = $miDB->exec($insert);
+        /* configurar las excepcion */
+        $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                        /* mostrar el numero de registros que hemos seleccionado */
-                        echo '
+
+        /* insertamos los valores que hemos cogido desde el formolario */
+        $insert = ' INSERT INTO Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) VALUES ("' . $aRespuestas['codeDep'] . '","' . $aRespuestas['description'] . '", null,"' . $aRespuestas['salary'] . '")';
+        $numRegistros = $miDB->exec($insert);
+
+        /* mostrar el numero de registros que hemos seleccionado */
+        echo '
                             <div class="w3-panel w3-green">
                             <h3>Success!</h3>
                             <p>Se ha insertado  ' . $numRegistros . ' nuevo registro.</p>
                             </div>';
 
-                        /* Seleccionamos toda la tabla ademas el nuevo registro */
-                        $sql = 'SELECT * FROM Departamento';
+        /* Seleccionamos toda la tabla ademas el nuevo registro */
+        $sql = 'SELECT * FROM Departamento';
 
-                        /* usar las consultas preparadas */
-                        $resultadoConsulta = $miDB->prepare($sql);
-                        $resultadoConsulta->execute();
+        /* usar las consultas preparadas */
+        $resultadoConsulta = $miDB->prepare($sql);
+        $resultadoConsulta->execute();
 
-                        /* Recorrer el resultado de la consulta */
-                        $registroObjeto = $resultadoConsulta->fetchObject();
+        /* Recorrer el resultado de la consulta */
+        $registroObjeto = $resultadoConsulta->fetchObject();
 
-                        while ($registroObjeto) {
+        while ($registroObjeto) {
 
-                            //Mostrar los datos correctos obligatorios
-                            ?>
+            //Mostrar los datos correctos obligatorios
+            ?>
                             <tr>
                                 <td><?php echo $registroObjeto->CodDepartamento; ?></td>
                                 <td><?php echo $registroObjeto->DescDepartamento; ?></td>
                                 <td><?php echo $registroObjeto->VolumenNegocio; ?></td>
                             </tr>
 
-                            <?php
-                            $registroObjeto = $resultadoConsulta->fetchObject();
-                        }
-                        ?>
+            <?php
+            $registroObjeto = $resultadoConsulta->fetchObject();
+        }
+        ?>
                     </table>
                 </div><?php
             } catch (PDOException $exception) {
@@ -192,7 +197,7 @@
         } else {
             //Mostrar el formulario hasta que lo rellenemos correctamente
             //Mostrar formulario
-            ?>
+    ?>
             <div>
                 <table id="t1">
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -225,9 +230,9 @@
                 </table>
 
             </div>
-            <?php
-        }
-        ?>
+    <?php
+}
+?>
 
 
 

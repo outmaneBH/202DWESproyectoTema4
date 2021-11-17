@@ -44,9 +44,11 @@
                             </div>';
          
 
-            $aDepartamentos = ["Departametos"];
-            foreach ($resultadoConsulta as $clave => $valor) {
-                $aDepartamento = ["Deparatemento :"=>$clave,
+            $aDepartamentos = [];
+            //$clave =>
+            foreach ($resultadoConsulta as  $valor) {
+                $aDepartamento = [
+                    //"Deparatemento :"=>$clave,
                     "codeDep" => $valor["CodDepartamento"],
                     "description" => $valor['DescDepartamento'],
                     "salary" => $valor['VolumenNegocio']

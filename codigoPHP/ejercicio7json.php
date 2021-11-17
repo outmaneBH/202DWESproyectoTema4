@@ -18,6 +18,8 @@
         require_once "../config/confDBPDO.php";
 
         try {
+            echo '<h2>Insert data from Json file To database</h2>';
+            
             /* los datos of connection */
             $miDB = new PDO(HOST, USER, PASSWORD);
 
@@ -28,12 +30,16 @@
                     INSERT INTO Departamento VALUES
                     (:codDepartamento, :descDepartamento, :fechaBaja, :volumenNegocio);
             OB;
+            
             $Consulta = $miDB->prepare($sql);
-            $jsonFile = file_get_contents('../tmp/tablaDepartamento.json');
+            
+            $jsonFile = file_get_contents("../tmp/tablaDepartamento.json");
 
 
             $Departamentos = json_decode($jsonFile);
-
+            
+            /* Empezamos nuestro transaccion */
+            $miDB->beginTransaction();
 
             foreach ($Departamentos as $Departamento) {
                 $Consulta->bindParam(':codDepartamento', $Departamento->codDepartamento);
@@ -43,6 +49,8 @@
 
                 $Consulta->execute();
             }
+            /* Ejecutar el commit */
+            $miDB->commit();
 
             echo '
                             <div class="w3-panel w3-blue">

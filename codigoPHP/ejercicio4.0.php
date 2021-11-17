@@ -53,11 +53,7 @@
         $aRespuestas = ["description" => null
         ];
 
-        /* Establecemos la connection con pdo en global */
-        $miDB = new PDO(HOST, USER, PASSWORD);
-
-        /* configurar las excepcion */
-        $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       
 
 
         /* comprobar si ha pulsado el button enviar */
@@ -97,6 +93,12 @@
         $aRespuestas = [
                 "description" => $_REQUEST['description']
             ];
+         /* Establecemos la connection con pdo en global */
+        $miDB = new PDO(HOST, USER, PASSWORD);
+
+        /* configurar las excepcion */
+        $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
         $sql = "SELECT * from Departamento where DescDepartamento like  '%" . $aRespuestas['description'] . "%'";
         $resultadoConsulta = $miDB->prepare($sql);
         $resultadoConsulta->execute();
