@@ -6,7 +6,8 @@ require '../config/confDBPDO.php';
 /*
  * mostarando todo el codigo cuando todo esta bien 
  */
-echo "<h3 style='color:red;'>Correct Cocnnection</h3>";
+echo '<h1>Conexión a la base de datos con la cuenta usuario :</h1>';
+echo "<h3 style='color:red;'>Correct Connection</h3>";
 
 /* usamos el try catch para mostarar si hay errores */
 try {

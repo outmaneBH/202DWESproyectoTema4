@@ -1,2 +1,2 @@
-ErrorDocument 403 /proyectoTema4/error/403.html
-ErrorDocument 404 /proyectoTema4/error/404.html
+ErrorDocument 403 "No tienes Permisos"
+ErrorDocument 404 /202DWESproyectoTema4/error/404.html

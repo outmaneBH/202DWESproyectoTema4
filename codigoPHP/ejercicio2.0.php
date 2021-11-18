@@ -12,6 +12,11 @@
             table{
                 width: 100%;
             }
+            h2{
+                text-align: center;
+                font-weight: bold;
+                text-decoration: underline;
+            }
         </style>
     </head>
      <body>
@@ -30,6 +35,7 @@
         /* configurar las excepcion */
         $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         ?>
+         <h2>El contenido de la tabla Departamento</h2>
             <table>
                 <tr>
                     <th>Código del Departamento</th>

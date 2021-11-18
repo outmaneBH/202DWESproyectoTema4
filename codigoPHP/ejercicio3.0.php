@@ -6,7 +6,7 @@
         <style>
             #t1{
                 position: relative;
-                left:  23%;
+                left:  30%;
                 top: 110px;
                 border-top:  1px solid aqua;
                 border-bottom:  1px solid aqua;
@@ -26,6 +26,11 @@
             }
             #t2 {
                 text-align: center;
+            }
+            h2{
+                text-align: center;
+                font-weight: bold;
+                text-decoration: underline;
             }
 
         </style>
@@ -131,7 +136,9 @@
                 "salary" => $_REQUEST['salary']
             ];
             ?>
+        
             <div id="div2">
+               
                 <table id="t2" class="w3-table w3-bordered">
                     <tr>
                         <th>Código del Departamento</th>
@@ -198,6 +205,7 @@
             //Mostrar el formulario hasta que lo rellenemos correctamente
             //Mostrar formulario
     ?>
+         <h2> Formulario para añadir un departamento a la tabla Departamentos</h2>
             <div>
                 <table id="t1">
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -224,7 +232,7 @@
 
                         <tr> 
                             <td></td>
-                            <td><input type="submit" class="w3-btn w3-teal" name="submitbtn" value="Enviar datos"/><input type="reset" class="w3-btn w3-red" name="resetbtn" value="Borrar datos"/></td>
+                            <td><input type="submit" class="w3-btn w3-teal" name="submitbtn" value="Enviar datos"/></td>
                         </tr>
                     </form>
                 </table>

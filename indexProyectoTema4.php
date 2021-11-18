@@ -105,7 +105,7 @@
                     <tr>
                         <td>9. Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio
                             GIT</td>
-                        <td><a href="../202DWESMtoproyectoTema4/indexMtoproyectoTema4.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="../202DWESMtoDepartamentosTema4/indexMtoproyectoTema4.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                  
                     </tr>
 

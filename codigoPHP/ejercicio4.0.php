@@ -10,7 +10,7 @@
             #t1{
 
                 position: relative;
-                left:  33%;
+                left:  35%;
                 top: 110px;
                 border-top:  1px solid aqua;
                 border-bottom:  1px solid aqua;
@@ -18,7 +18,11 @@
             #t1 td{
                 padding: 20px;
             }
-
+ h2{
+                text-align: center;
+                font-weight: bold;
+                text-decoration: underline;
+            }
         </style>
     </head>
     <body>
@@ -53,9 +57,7 @@
         $aRespuestas = ["description" => null
         ];
 
-       
-
-
+    
         /* comprobar si ha pulsado el button enviar */
         if (isset($_REQUEST['submitbtn'])) {
             //Para cada campo del formulario: Validamos la entrada y actuar en consecuencia
@@ -151,6 +153,7 @@
                     //Mostrar el formulario hasta que lo rellenemos correctamente
                     //Mostrar formulario
                     ?>
+        <h2>Formulario de búsqueda de departamentos por descripción </h2>
             <div>
                 <table id="t1">
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
