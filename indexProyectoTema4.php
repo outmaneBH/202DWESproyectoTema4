@@ -6,11 +6,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="webroot/css/footer.css"/>
         <link rel="stylesheet" href="webroot/css/style.css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="webroot/media/icons/fav.png" type="image/ico" sizes="16x16">
+        <style>
+            p{
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <div class="container mt-3">
+
+            <div class="w3-col s6 w3-center">
+                <div class="w3-bar">
+                    <p>Configuration daw202.sauces.local </p>
+                    <a href="#" ><button disabled class="w3-bar-item w3-button w3-indigo" style="width:33.3%">Create</button></a>
+                    <a href="#" ><button disabled class="w3-bar-item w3-button w3-cyan" style="width:33.3%">Insert </button></a>
+                    <a href="#" ><button  disabled class="w3-bar-item w3-button w3-brown" style="width:33.3%">Delete </button></a>
+                </div>
+            </div>
+            <div class="w3-col s6 w3-center">
+                <div class="w3-bar">
+                    <p>Configuration 1&1</p>
+                    <a href="scriptDB/CreaDB202DWESProyectoTema4-1&1.php" ><button class="w3-bar-item w3-button w3-indigo" style="width:33.3%">Create</button></a>
+                    <a href="scriptDB/CargaInicialDB202DWESProyectoTema4-1&1.php" ><button class="w3-bar-item w3-button w3-cyan" style="width:33.3%">Insert</button></a>
+                    <a href="scriptDB/BorraDB202DWESProyectoTema4-1&1.php" ><button class="w3-bar-item w3-button w3-brown" style="width:33.3%">Delete</button></a>
+                </div>
+            </div>
             <h2></h2>
             <p></p>            
             <table class="table table-hover">
@@ -24,9 +47,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!--Mostrar codigo de scripts-->
                     <tr>
-                        <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td> 
+                        <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
                         <td><a href="codigoPHP/ejercicio1.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio1.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
                         <td><a href="codigoPHP/ejercicio1.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
@@ -35,34 +57,37 @@
 
                     <tr>
                         <td>2. Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                        <td><a href="codigoPHP/ejercicio2.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio2.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio2.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio2.1.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
                     <tr>
                         <td>3. Formulario para añadir un departamento a la tabla Departamento con validación de entrada y
                             control de errores.</td>
-                        <td><a href="codigoPHP/ejercicio3.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio3.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
                     <tr>
                         <td>4. Formulario   de   búsqueda   de   departamentos   por   descripción   (por   una   parte   del   campo
                             DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).</td>
-                        <td><a href="codigoPHP/ejercicio4.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio4.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
                     <tr>
                         <td> 5. Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
                             insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.</td>
-                        <td><a href="codigoPHP/ejercicio5.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio5.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
                     <tr>
@@ -70,9 +95,10 @@
                             utilizando una consulta preparada. (Después de programar y entender este ejercicio, modificar los
                             ejercicios anteriores para que utilicen consultas preparadas). Probar consultas preparadas sin bind,
                             pasando los parámetros en un array a execute.</td>
-                        <td><a href="codigoPHP/ejercicio6.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio6.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
+                        <td><a href="codigoPHP/ejercicio00.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
                     <tr>
                         <td>7. XML - Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
@@ -106,10 +132,8 @@
                         <td>9. Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio
                             GIT</td>
                         <td><a href="../202DWESMtoDepartamentosTema4/indexMtoproyectoTema4.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
-                 
+
                     </tr>
-
-
                 </tbody>
             </table>
         </div>
@@ -119,18 +143,18 @@
                 <!-- Section: Social media -->
                 <section class="mb-3">
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1"  href="https://github.com/outmaneBH/202DWESproyectoTema4" target="_blank"  role="button">
+                    <a class="btn btn-outline-light btn-floating m-1" href="" role="button">
                         <img id="git" style="width: 30px" src="webroot/media/icons/git.png" alt="github"/>  
                     </a>
                 </section>
-
+          
             </div>
             <!-- Grid container -->
 
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 Copyrights © 2021 
-                <a class="text-white"   href="https://github.com/outmaneBH/202DWESproyectoTema4" target="_blank" >OUTMANE BOUHOU</a>
+                <a class="text-white" href="#">OUTMANE BOUHOU</a>
                 . All rights reserved.
             </div>
             <!-- Copyright -->
