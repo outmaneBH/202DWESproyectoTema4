@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ejercicio5 - PDO</title>
+        <title>Cargar</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
             div{
@@ -27,10 +27,10 @@ try {
     $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = <<<OB
-           insert into Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) values 
+           INSERT INTO Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) values 
 ('FOL', 'departamento FOL', null, 102.4),
 ('DAW', 'departamento DAW', null, 1000.3),
-('DIW', 'departamento DIW', null, 289.3)
+('DIW', 'departamento DIW', null, 289.3);
             OB;
     $miDB = exec($sql);
     echo '                  <div class="w3-panel w3-blue">
@@ -39,10 +39,10 @@ try {
                             </div>';
 } catch (PDOException $ex) {
     /* Si hay algun error el try muestra el error del codigo */
-    echo '<span> Codigo del Error :' . $exception->getCode() . '</span> <br>';
+    echo '<span> Codigo del Error :' . $ex->getCode() . '</span> <br>';
 
     /* Muestramos su mensage de error */
-    echo '<span> Error :' . $exception->getMessage() . '</span> <br>';
+    echo '<span> Error :' . $ex->getMessage() . '</span> <br>';
 } finally {
     unset($miDB);
 }
