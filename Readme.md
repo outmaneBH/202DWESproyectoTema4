@@ -1,6 +1,6 @@
 ## DWES - PROYECTO TEMA 4
 
-proyectoTema4 v.1 ,usando la base de datos con funciones de crud.
+proyectoTema4 v.2 ,usando la base de datos con funciones de crud.
 
 ## ENTORNO DE DESAROLLO
 * Apache2.4
