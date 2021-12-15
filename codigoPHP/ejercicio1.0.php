@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<title>Connexion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    body{
+        padding: 10px;
+    }
+    </style>
+<body>
 <?php
 
 /* Llamar la configuracion de pdo host y usuario */
@@ -26,11 +37,11 @@ try {
     ];
 
     /* recorrer el array de attributes */
-    echo '<table>';
+    echo '<table class="w3-table w3-bordered"><tr class="w3-green"><td>Attribute</td><td>Valor</td></tr>';
     foreach ($aAttributes as $valorAttributes) {
         echo '<tr>';
         echo "<td>" . "PDO::ATTR_$valorAttributes:" . "</td>";
-        echo "<td>" . $miDB->getAttribute(constant("PDO::ATTR_$valorAttributes")) . "</td>";
+        echo "<td >" . $miDB->getAttribute(constant("PDO::ATTR_$valorAttributes")) . "</td>";
         echo '</tr>';
     } echo '</table>';
     
@@ -81,6 +92,7 @@ try {
     unset($miDB);
 }
 ?>
-
+</body>
+</html>
 
 
