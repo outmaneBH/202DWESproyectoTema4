@@ -71,7 +71,6 @@
                         <th>CodigoPDO</th>
                         <th>MYSQLI</th>
                         <th>CodigoM.</th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -79,8 +78,7 @@
                         <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
                         <td><a href="codigoPHP/ejercicio1.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio1.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-                        <td><a href="codigoPHP/ejercicio1.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
-                        <td><a href="mostrarcodigo/muestraEjercicio1.1.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
+
                     </tr>
 
                     <tr>
