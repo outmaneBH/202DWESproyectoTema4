@@ -69,6 +69,8 @@
                         <th>Enunciado</th>
                         <th>PDO</th>
                         <th>CodigoPDO</th>
+                        <th>MYSQLI</th>
+                        <th>CodigoM.</th>
 
                     </tr>
                 </thead>
@@ -77,14 +79,16 @@
                         <td>1. (ProyectoTema4) Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
                         <td><a href="codigoPHP/ejercicio1.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio1.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-
+                        <td><a href="codigoPHP/ejercicio1.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio1.1.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
                     <tr>
                         <td>2. Mostrar el contenido de la tabla Departamento y el número de registros.</td>
                         <td><a href="codigoPHP/ejercicio2.0.php"><img src="webroot/media/icons/blue.png" alt="runIcon"></a></td>
                         <td><a href="mostrarcodigo/muestraEjercicio2.0.php"><img src="webroot/media/icons/orange.png" alt="runIcon"></a></td>
-
+                        <td><a href="codigoPHP/ejercicio2.1.php"><img src="webroot/media/icons/jouer.png" alt="runIcon"></a></td>
+                        <td><a href="mostrarcodigo/muestraEjercicio2.1.php"><img src="webroot/media/icons/red.png" alt="runIcon"></a></td>
                     </tr>
 
                     <tr>
@@ -174,7 +178,7 @@
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 Copyrights © 2021 
-                <a class="text-white" href="#">OUTMANE BOUHOU</a>
+                <a class="text-white" href="../../index.html">OUTMANE BOUHOU</a>
                 . All rights reserved.
             </div>
             <!-- Copyright -->

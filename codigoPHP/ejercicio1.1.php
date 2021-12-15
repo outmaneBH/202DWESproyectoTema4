@@ -1,39 +1,44 @@
-<?php
-/*Llamar la configuracion de Mysqli*/
-require '../config/confDBMySQL.php';
-/*
-$miDB = new mysqli();
+<!DOCTYPE html>
+<html>
+    <title>Connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+            padding: 10px;
+        }
+    </style>
+    <body>
+        <?php
+        /* Llamar la configuracion de mysqli host y usuario */
+        require '../config/confDBMySQL.php';
 
-// la Conexión sin errores :
-$miDB->connect(HOST, USER, PASSWORD,DB);
-//Para controlar los posibles errores de conexión
+        /*
+         * mostarando todo el codigo cuando todo esta bien 
+         */
+        echo '<h1>Conexión a la base de datos con MYSQLI :</h1>';
+        echo "<h4 style='color:red;'>1-Correct Connection</h4>";
 
-$error = $miDB->connect_errno;
+        /* Establecemos la connection con mysqli */
+        $miDB = new mysqli(HOST, USER, PASSWORD);
+        if ($miDB->connect_error) {
+            echo ("Connection failed: " . $conn->connect_error);
+        }
+        echo " <h3 style='color:blue;'>Connected successfully </h3>";
 
-if ($error != null) {
-    echo "<p style='color:red'> $error</p>";
-} else {
-    echo "<p style='color:green'>Connected successfully</p>";
-}
-//Ceramos la Conexión
-$miDB->close();
+        $miDB->close();
+        
+        /* Uso de error conexion */
+        echo "<h3 style='color:red;'>2-Error Cocnnection</h3>";
 
-
-// la Conexión con errores :
-
-$miDB->connect(HOST, USER, "paso",DB);
-$error = $miDB->connect_errno;
-
-if ($error != null) {
-    echo "<p style='color:red'> $error</p>";
-} else {
-    echo "<p style='color:green'>Connected successfully</p>";
-}
-
-//Ceramos la Conexión
-$miDB->close();*/
-?>
-
-
+        /* Establecemos la connection con mysqli mal hecha */
+        $miDB = new mysqli(HOST, "ob", "12345test");
+        if ($miDB->connect_error) {
+            echo ("Connection failed: " . $conn->connect_error);
+        }
+        $miDB->close();;
+        ?>
+    </body>
+</html>
 
 

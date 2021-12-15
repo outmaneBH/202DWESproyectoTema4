@@ -1,6 +1,6 @@
 ## DWES - PROYECTO TEMA 4
 
-proyectoTema4 v.2 ,usando la base de datos con funciones de crud.
+proyectoTema4 v.3 ,usando la base de datos con funciones de crud.
 
 ## ENTORNO DE DESAROLLO
 * Apache2.4
@@ -10,8 +10,10 @@ proyectoTema4 v.2 ,usando la base de datos con funciones de crud.
 * phpMyadmin
 
 ## link entorno  de explotación
- http://daw202.sauces.local/proyectoTema4/indexProyectoTema4.php
+ http://daw202.sauces.local/202DWESproyectoTema4
 
 ## link entorno  de 1 & 1
- http://daw202.sauces.local/proyectoTema4/indexProyectoTema4.php
+ http://daw202.ieslossauces.es/202DWESproyectoTema4
 
+### Ultima actualizacion :
+* 15/12/2021

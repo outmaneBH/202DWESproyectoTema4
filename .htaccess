@@ -1,2 +1,4 @@
 ErrorDocument 403 /202DWESproyectoTema4/error/403.html
 ErrorDocument 404 /202DWESproyectoTema4/error/404.html
+
+DirectoryIndex indexProyectoTema4.php
